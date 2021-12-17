@@ -1,0 +1,105 @@
+# Site settings
+title: Hyejin Park
+email: parkebbi2@gmail.com
+url: https://github.com/hyejin-s/hyejin-s.github.io
+description: "hyejin-s homepage"
+keywords: "Artificial Intelligence, Machine Learning"
+skills: "Graduate School of Artificial Intelligence @POSTECH" 
+skills2: '<a href = "https://ml.postech.ac.kr/ target = "parent"> Machine Learning Labaratory </a>'
+meta_author: Hyejin Park
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Contact form:
+# - static : pass through formspree.io to validate email sending
+# - disqus : replace contact form by disqus thread
+# - comment the line below if you want to stick with the default PHP contact form
+contact: static
+
+# If you use disqus you need disqus shortname
+# https://help.disqus.com/customer/portal/articles/466208
+disqus_shortname: myshortname
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: f7be81 #18bc9c #80B3FF
+  primary-rgb: "24,288,156" #"128,179,255"
+  secondary: f5d0a9 #F7BE81 #FD6E8A
+  secondary-dark: 233140 #A2122F
+
+# Footer settings
+footer:
+  copyright: Dr. Henry Jekyll
+  # location: Location
+  # social: Around the Web
+  credits: Credits
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  # - title: twitter
+  #   url: http://twitter.com/jekyllrb
+  # - title: facebook
+  #   url:
+  # - title: stack-overflow
+  #   url: http://stackoverflow.com/questions/tagged/jekyll
+  # - title: bitbucket
+  #   url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/hyejin-s
+  - title: envelope-o
+    url: mailto:parkebbi2@gmail.com
+
+# Postal address (add as many lines as necessary)
+# address:
+#   - line: 3481 Melrose Place
+#   - line: Beverly Hills, CA 90210
+
+# Credits content
+credits: 'Bootstrap created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+#for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: ""
+
+# cv
+cv: '<a href = "https://docs.google.com/document/d/1y85Ggos7Hx_UdSZ_JwXQeFMXFktlF7SE/edit?usp=sharing&ouid=112598510205957847172&rtpof=true&sd=true" target = "parent" > Click to my CV </a>!'
+
+
+biography:
+  - degree: MS
+    university: Pohang University of Science and Technology (POSTECH)
+    # country: ", South Korea"
+    time: MAR. 2020 - PRESENT
+    major: M.S. in Graduate School of Artificial Intelligence
+    # details: "Advisor: Jungseul Ok"
+  
+  - degree: VS
+    university: University of California, Berkeley (UC Berkely)
+    # country: ", United States of America"
+    time: JUN. 2017 – AUG. 2017
+    major: Visiting Student
+
+  - degree: BS
+    university: Daegu Gyeongbuk Institute of Science and Technology (DGIST)
+    # country: ", South Korea"
+    time: FEB. 2015 - MAR. 2020
+    major: Bachelor of Engineering Degree in the School of Undergraduate Studies, College of Transdisciplinary Studies
+
+publication:
+  - content: "<b>Hyejin Park</b>*, Seiyun Shin*, Kwang-Sung Jun, and Jungseul Ok, 
+  'Transfer Learning in Bandits with Latent Continuity', 2021 IEEE International Symposium on Information Theory (ISIT), 2021, pp. 1463-1468, doi: 10.1109/ISIT45174.2021.9518093."
+    url: https://arxiv.org/abs/2102.02472
+  - content: "<b>Hyejin Park</b>*, Byungchan Ko*, Jaechang Kim*, Hoyoung Kim, Jinwoo Jeon, and Jungseul Ok, 
+  'Effect of Privacy Preserving in Personalized Federated Learning with Heterogeneous Data from Wearable Devices', KSC2021. (will be updated!)"

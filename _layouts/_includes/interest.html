@@ -1,0 +1,46 @@
+<!-- Contact Section -->
+<section class="basic-black", id="eudcation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Education</h2>
+                <hr class="star-primary-black">
+            </div>
+        </div>
+        <div class="row">
+            {% for list in site.biography %}
+
+            <div class="upper-row">
+                <div class="div-left">
+                    <!-- <li style="font-size: 25px; line-height: 120%;"> -->
+                    <div style="font-size: 25px; font-weight: 1000; line-height: 120%;">{{ list.university }}</div>
+                    <div style="font-size: 25px; line-height: 120%;"><i>{{ list.major }}</i></div>
+                    <p class="bio">{{ list.country }}</p>
+                </div>
+                <div class="div-right">
+                    <span class="time">{{ list.time }}</span>
+                </div>
+            </div>
+                <!-- <li style="font-size: 25px; line-height: 120%;"> -->
+                <!-- <div class="bio-title">{{ list.university }}</div>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <span class="time">{{ list.time }}</span>
+            </div>
+            
+            <div class="bio"><i>{{ list.major }}</i></div>
+            <p class="bio">{{ list.country }}</p>
+            <p class="bio">{{ list.details }}</p> -->
+        
+            {% endfor %}
+                    <!-- <span>{{ site.biography.country }}</span>
+                    <div class="time">{{ site.biography.time }}</div>
+            <div class="company">{{ site.biography.major }}</div>
+    
+            <div class="col-lg-4">{{ site.biography.details }}</div> -->
+    
+        </div><!--//meta-->
+    </div>
+</section>
+
+
+

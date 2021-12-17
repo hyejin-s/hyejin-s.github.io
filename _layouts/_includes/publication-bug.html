@@ -1,0 +1,27 @@
+ <!-- About Section -->
+ <section class="success" id="publication">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Publication</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="font-size: 25px;">
+                <ol>
+                {% for list in site.publication %}
+                    <li>
+                    <div style="margin-bottom: 20px; font-size: 25px;">
+                    {{ list.content }}
+                        <a href="{{ list.url }}" target="parent">
+                            <i class="fa fa-fw fa-link"></i>
+                        </a>
+                    </div>
+                    </li>  
+                {% endfor %}
+                </ol>  
+            </div>
+        </div>
+    </div>
+</section>
