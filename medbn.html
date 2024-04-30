@@ -45,7 +45,6 @@
 
 <body>
 
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -141,36 +140,14 @@
   <!-- End teaser video -->
 
 
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Figure 1</h2>
-        <iframe src="static/pdfs/f1-mean-vs-median.pdf" width="50%" height="200">
-        </iframe>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Figure 2</h2>
-        <iframe src="static/pdfs/f2-medbn-overview-col.pdf" width="50%" height="200">
-        </iframe>
-
-      </div>
-    </div>
-  </section>
-
-
-
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:50%">
-        <h5 class="subtitle is-5">
-          jpg test
+        <h2 class="title is-3 has-text-centered"><b>Med</b>ian <b>B</b>atch <b>N</b>ormalization (MedBN)</h2>
+        <img src="./static/images/f2-medbn-overview-col_page-0001.jpg" style="max-width:50%">
+        <!-- <br><br> -->
+        <h5 lass="subtitle has-text-justified">
+          An overview of MedBN
         </h5>
       </div>
     </div>
@@ -179,17 +156,16 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <h2 class="title is-2 has-text-centered">Pipeline</h2>
-        <img src="./static/images/f2-medbn-overview-col_page-0001.jpg">
-
-        <br><br>
-        <h2 class="subtitle has-text-justified">
-          jpg test
-        </h2>
+        <h2 class="title is-3 has-text-centered">Vulnerabiliy vs. Robustness</h2>
+        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:50%">
+        <h5 class="subtitle is-5">
+          An illustrative example of the vulnerability of mean in a batch normalization layer
+          to manipulation by malicious sample (left), contrasted with the robustness of median
+          such manipulation (right), when dealing with malicious samples within the batch.
+        </h5>
       </div>
     </div>
   </section>
-
 
 
   <!-- Paper abstract -->
@@ -231,34 +207,34 @@
 
 
   <!-- Image carousel -->
-  <section class="hero is-small">
+  <!-- <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
         <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+          <div class="item"> -->
+  <!-- Your image here -->
+  <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
               First image description.
             </h2>
           </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+          <div class="item"> -->
+  <!-- Your image here -->
+  <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
               Second image description.
             </h2>
           </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+          <div class="item"> -->
+  <!-- Your image here -->
+  <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
               Third image description.
             </h2>
           </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+          <div class="item"> -->
+  <!-- Your image here -->
+  <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
               Fourth image description.
             </h2>
@@ -266,35 +242,35 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- End image carousel -->
 
 
   <!-- Youtube video -->
-  <section class="hero is-small is-light">
+  <!-- <section class="hero is-small is-light">
     <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3">Video Presentation</h2>
+      <div class="container"> -->
+  <!-- Paper video. -->
+  <!-- <h2 class="title is-3">Video Presentation</h2>
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
 
-            <div class="publication-video">
-              <!-- Youtube embed code here -->
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+            <div class="publication-video"> -->
+  <!-- Youtube embed code here -->
+  <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- End youtube video -->
 
 
 
   <!-- Paper poster -->
-  <section class="hero is-small is-light">
+  <!-- <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container">
         <h2 class="title">Poster</h2>
@@ -304,7 +280,7 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
   <!--End paper poster -->
 
 
@@ -312,7 +288,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{park2024medbn,
+        title={MedBN: Robust Test-Time Adaptation against Malicious Test Samples},
+        author={Park, Hyejin and Hwang, Jeongyeon and Mun, Sunung and Park, Sangdon and Ok, Jungseul},
+        journal={arXiv preprint arXiv:2403.19326},
+        year={2024}
+      }</code></pre>
     </div>
   </section>
   <!--End BibTex citation -->
