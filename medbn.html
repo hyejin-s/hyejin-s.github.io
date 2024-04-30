@@ -53,25 +53,20 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">MedBN: Robust Test-Time Adaptation against Malicious Test Samples
             </h1>
-            <p class="title is-3 publication-title">CVPR 2024</p>
+            <p class="title is-4 publication-title">CVPR 2024</p>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hyejin Park</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jeongyeon Hwang</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Sunung Mun</a></sup>,</span>
-              <span class="author-block">
-                <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Sangdon Park</a></sup>,</span>
-              <span class="author-block">
-                <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Jungseul Ok</a><sup>†</sup>
-              </span>
+              <span class="author-block">Hyejin Park<sup>*</sup>,</span>
+              <span class="author-block">Jeongyeon Hwang<sup>*</sup>,</span>
+              <span class="author-block">Sunung Mun</sup>,</span>
+              <span class="author-block">Sangdon Park</sup>,</span>
+              <span class="author-block">Jungseul Ok<sup>†</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">Pohang University of Science and Technology (POSTECH)</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="eql-cntrb"><small><br><sup>*</sup> Equal contribuion, <sup>†</sup> Corresponding
+                  author</small></span>
             </div>
 
             <div class="column has-text-centered">
@@ -87,7 +82,7 @@
                   </a>
                 </span>
 
-                <!-- Supplementary PDF link -->
+                <!-- Supplementary PDF link
                 <span class="link-block">
                   <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -96,7 +91,7 @@
                     </span>
                     <span>Supplementary</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- Github link -->
                 <span class="link-block">
@@ -146,13 +141,36 @@
   <!-- End teaser video -->
 
 
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Figure 1</h2>
+        <iframe src="static/pdfs/f1-mean-vs-median.pdf" width="50%" height="200">
+        </iframe>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Figure 2</h2>
+        <iframe src="static/pdfs/f2-medbn-overview-col.pdf" width="50%" height="200">
+        </iframe>
+
+      </div>
+    </div>
+  </section>
+
+
+
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:100%">
+        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:50%">
         <h5 class="subtitle is-5">
-          <b>MMVP</b> is a a Multimodal MoCap Dataset with Vision and Pressure sensors. It supports provides accurate
-          and dense plantar pressure signals synchronized with RGBD observations.
+          jpg test
         </h5>
       </div>
     </div>
@@ -162,25 +180,15 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="title is-2 has-text-centered">Pipeline</h2>
-        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/image/method.pdf">
-      </video> -->
-        <!-- <embed src="./static/image/method.pdf" type="application/pdf"> -->
-        <img src="./static/images/f1-mean-vs-median_page-0001.jpg">
+        <img src="./static/images/f2-medbn-overview-col_page-0001.jpg">
+
         <br><br>
         <h2 class="subtitle has-text-justified">
-          The input of PIE-NeRF is the same as other NeRF-based frameworks, which consists of a collection of images of
-          a static scene. An adaptive Poisson disk sampling is followed to query the 3D geometry of the model, which are
-          sparsified into n Q-GMLS kernels. Integrator points are placed over the model, including centers of Q-GMLS
-          kernels (i.e., kernel IPs). Discretization at kernels and numerical integration at IPs enable efficient
-          synthesis of novel and physics-based elastodynamic motions. The quadratic warping scheme helps to better
-          retrieve the color/texture of a deformed spatial position to render the final result.
+          jpg test
         </h2>
       </div>
     </div>
   </section>
-
-
 
 
 
