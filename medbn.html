@@ -27,6 +27,7 @@
 
   <title>MedBN: Robust Test-Time Adaptation against Malicious Test Samples</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -59,13 +60,12 @@
               <span class="author-block">Jeongyeon Hwang<sup>*</sup>,</span>
               <span class="author-block">Sunung Mun</sup>,</span>
               <span class="author-block">Sangdon Park</sup>,</span>
-              <span class="author-block">Jungseul Ok<sup>†</sup></span>
+              <span class="author-block">Jungseul Ok</span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">Pohang University of Science and Technology (POSTECH)</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup> Equal contribuion, <sup>†</sup> Corresponding
-                  author</small></span>
+              <span class="eql-cntrb"><small><br><sup>*</sup> Equal Contribuion</small></span>
             </div>
 
             <div class="column has-text-centered">
@@ -143,22 +143,64 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <h2 class="title is-3 has-text-centered"><b>Med</b>ian <b>B</b>atch <b>N</b>ormalization (MedBN)</h2>
-        <img src="./static/images/f2-medbn-overview-col_page-0001.jpg" style="max-width:50%">
-        <!-- <br><br> -->
-        <h5 lass="subtitle has-text-justified">
+        <h2 class="title is-3 has-text-centered">Median Batch Normalization (MedBN)</h2>
+        <img src="./static/images/f2-medbn-overview-col_page-0001.jpg" style="max-width:65%">
+        <h5 class="subtitle is-6">
           An overview of MedBN
         </h5>
       </div>
     </div>
   </section>
 
+
+  <!-- Paper abstract -->
+  <!-- <section class="section hero is-light"> -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Test-time adaptation (TTA) has emerged as a promising
+                solution to address performance decay due to unforeseen distribution shifts between training and test
+                data. While recent
+                TTA methods excel in adapting to test data variations, such
+                adaptability exposes a model to vulnerability against malicious examples. Indeed, previous studies have
+                uncovered
+                security vulnerabilities within TTA even when a small proportion of the test batch is maliciously
+                manipulated. In response
+                to the emerging threat, we propose median batch normalization (MedBN), leveraging the robustness of the
+                median
+                for statistics estimation within the batch normalization layer
+                during test-time inference. Our method is algorithm-agnostic,
+                thus allowing seamless integration with existing TTA frameworks. Our experimental results on benchmark
+                datasets, including CIFAR10-C, CIFAR100-C, and ImageNet-C, consistently demonstrate that MedBN
+                outperforms
+                existing approaches in maintaining robust performance across different
+                attack scenarios, encompassing both instant and cumulative
+                attacks. Through extensive experiments, we show that our
+                approach sustains the performance even in the absence of attacks, achieving a practical balance between
+                robustness and
+                performance.
+                <!-- Our code is available at https://github.com/mlpostech/MedBN-robust-test-time-adaptation. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="title is-3 has-text-centered">Vulnerabiliy vs. Robustness</h2>
-        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:50%">
-        <h5 class="subtitle is-5">
+        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:40%; margin-bottom: 0.5em">
+        <h5 class="subtitle is-6">
           An illustrative example of the vulnerability of mean in a batch normalization layer
           to manipulation by malicious sample (left), contrasted with the robustness of median
           such manipulation (right), when dealing with malicious samples within the batch.
@@ -167,43 +209,16 @@
     </div>
   </section>
 
-
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
+  <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Test-time adaptation (TTA) has emerged as a promising
-              solution to address performance decay due to unforeseen distribution shifts between training and test
-              data. While recent
-              TTA methods excel in adapting to test data variations, such
-              adaptability exposes a model to vulnerability against malicious examples. Indeed, previous studies have
-              uncovered
-              security vulnerabilities within TTA even when a small proportion of the test batch is maliciously
-              manipulated. In response
-              to the emerging threat, we propose median batch normalization (MedBN), leveraging the robustness of the
-              median
-              for statistics estimation within the batch normalization layer
-              during test-time inference. Our method is algorithm-agnostic,
-              thus allowing seamless integration with existing TTA frameworks. Our experimental results on benchmark
-              datasets, including CIFAR10-C, CIFAR100-C, and ImageNet-C, consistently demonstrate that MedBN outperforms
-              existing approaches in maintaining robust performance across different
-              attack scenarios, encompassing both instant and cumulative
-              attacks. Through extensive experiments, we show that our
-              approach sustains the performance even in the absence of attacks, achieving a practical balance between
-              robustness and
-              performance.
-              <!-- Our code is available at https://github.com/mlpostech/MedBN-robust-test-time-adaptation. -->
-            </p>
-          </div>
-        </div>
+      <div class="hero-body">
+        <h2 class="title is-3 has-text-centered">Main Results</h2>
+        <h5 class="subtitle is-6">
+          ...
+        </h5>
       </div>
     </div>
   </section>
-  <!-- End paper abstract -->
 
 
   <!-- Image carousel -->
