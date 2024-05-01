@@ -15,8 +15,8 @@
   <meta property="og:image:height" content="630" />
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="MedBN: Robust Test-Time Adaptation against Malicious Test Samples">
+  <meta name="twitter:description" content="The project page of MedBN (CVPR 2024)">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -42,6 +42,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+</head>
 </head>
 
 <body>
@@ -121,105 +123,125 @@
     </div>
   </section>
 
-
-  <!-- Teaser video-->
-  <!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-  <!-- Your video here -->
-  <!-- <source src="static/videos/banner_video.mp4" -->
-  <!-- type="video/mp4"> -->
-  <!-- </video> -->
-  <!-- <h2 class="subtitle has-text-centered"> -->
-  <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
-  <!-- </h2> -->
-  <!-- </div> -->
-  <!-- </div> -->
-  <!-- </section> -->
-  <!-- End teaser video -->
-
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
+  <!-- vulnerability vs. robustness -->
+  <section class="hero teaser" style="margin-top: -2em;">
+    <div class=" container is-max-desktop">
       <div class="hero-body">
-        <h2 class="title is-3 has-text-centered">Median Batch Normalization (MedBN)</h2>
-        <img src="./static/images/f2-medbn-overview-col_page-0001.jpg" style="max-width:65%">
+        <div class="hero-body-center"><img src="./static/images/f1-mean-vs-median.png"
+            style="width: 30em; margin-bottom: 0.5em"></div>
+        <h2 class="title is-6 has-text-centered"> A potential security flaw in the test-time adaptation process:
+          vulnerablity of mean in batch normalization layers
+        </h2>
         <h5 class="subtitle is-6">
-          An overview of MedBN
+          While Test-Time Adaptation (TTA) methods excel in adapting to test data variations, such adaptability exposes
+          a model to vulnerability against malicious examples, particulary when a small proportion of the test batch is
+          maliciously
+          manipulated.
         </h5>
       </div>
     </div>
   </section>
+  <!-- End -->
 
-
-  <!-- Paper abstract -->
-  <!-- <section class="section hero is-light"> -->
-  <section class="hero teaser">
+  <!-- overview of medbn -->
+  <section class="hero teaser" style="margin-bottom: 2em;">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                Test-time adaptation (TTA) has emerged as a promising
-                solution to address performance decay due to unforeseen distribution shifts between training and test
-                data. While recent
-                TTA methods excel in adapting to test data variations, such
-                adaptability exposes a model to vulnerability against malicious examples. Indeed, previous studies have
-                uncovered
-                security vulnerabilities within TTA even when a small proportion of the test batch is maliciously
-                manipulated. In response
-                to the emerging threat, we propose median batch normalization (MedBN), leveraging the robustness of the
-                median
-                for statistics estimation within the batch normalization layer
-                during test-time inference. Our method is algorithm-agnostic,
-                thus allowing seamless integration with existing TTA frameworks. Our experimental results on benchmark
-                datasets, including CIFAR10-C, CIFAR100-C, and ImageNet-C, consistently demonstrate that MedBN
-                outperforms
-                existing approaches in maintaining robust performance across different
-                attack scenarios, encompassing both instant and cumulative
-                attacks. Through extensive experiments, we show that our
-                approach sustains the performance even in the absence of attacks, achieving a practical balance between
-                robustness and
-                performance.
-                <!-- Our code is available at https://github.com/mlpostech/MedBN-robust-test-time-adaptation. -->
-              </p>
+        <!-- <h2 class="title is-3 has-text-centered">Median Batch Normalization (MedBN)</h2> -->
+        <div class="hero-body-center"><img src="./static/images/f2-medbn-overview.png"
+            style="width: 27em; margin-bottom: 0.5em"></div>
+        <h2 class=" title is-6 has-text-centered"> The process of batch normalizing
+          tranformation (Batch Normalization
+          vs. MedBN (Ours))
+        </h2>
+        <h5 class=" subtitle is-6">
+          ✅ In response to the threat of malicious samples,
+          we introduce <b>a simple and effective robust batch normalzation method, Median Batch
+            Normalization (MedBN),</b> which
+          uses the median instaed of mean to estimate the batch statistics.
+          Our method is algorithm-agnostic, thus allowing <u>seamless integration</u>
+          with existing TTA frameworks.
+        </h5>
+      </div>
+    </div>
+  </section>
+  <!-- End overview of medbn -->
+
+
+  <!-- paper abstract -->
+  <section class="section hero is-light">
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths" style="margin-bottom: -1em">
+              <h2 class=" title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Test-time adaptation (TTA) has emerged as a promising solution to address performance decay due to
+                  unforeseen distribution shifts between training and test data. While recent TTA methods excel in
+                  adapting to test data variations, such adaptability exposes a model to vulnerability against malicious
+                  examples. Indeed, previous studies have uncovered security vulnerabilities within TTA even when a
+                  small proportion of the test batch is maliciously manipulated. In response to the emerging threat, we
+                  propose median batch normalization (MedBN), leveraging the robustness of the median for statistics
+                  estimation within the batch normalization layer during test-time inference. Our method is
+                  algorithm-agnostic, thus allowing seamless integration with existing TTA frameworks. Our experimental
+                  results on benchmark datasets, including CIFAR10-C, CIFAR100-C, and ImageNet-C, consistently
+                  demonstrate that MedBN outperforms existing approaches in maintaining robust performance across
+                  different attack scenarios, encompassing both instant and cumulative attacks. Through extensive
+                  experiments, we show that our approach sustains the performance even in the absence of attacks,
+                  achieving a practical balance between robustness and performance.
+                  <!-- Our code is available at https://github.com/mlpostech/MedBN-robust-test-time-adaptation. -->
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
   <!-- End paper abstract -->
 
-
+  <!-- main results-->
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <h2 class="title is-3 has-text-centered">Vulnerabiliy vs. Robustness</h2>
-        <img src="./static/images/f1-mean-vs-median_page-0001.jpg" style="max-width:40%; margin-bottom: 0.5em">
-        <h5 class="subtitle is-6">
-          An illustrative example of the vulnerability of mean in a batch normalization layer
-          to manipulation by malicious sample (left), contrasted with the robustness of median
-          such manipulation (right), when dealing with malicious samples within the batch.
-        </h5>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
+      <div class="hero-body" style="margin-top: 2em;">
         <h2 class="title is-3 has-text-centered">Main Results</h2>
+        <h5 style="margin-bottom: 1em;">We consider seven TTA methods which update batch statistics or the affine
+          parameters of batch normalization layers and evaluate our approach using three major benchmarks for TTA:
+          CIFAR10-C, CIFAR100-C, and ImageNet-C. For further details, please refer to our paper.</h5>
+        <!-- Targeted Attack-->
+        <h2 class="title is-4 has-text-centered">🏹 Targeted Attack Scenarios (Table 1 in paper)</h2>
+        <div class="hero-body-center">
+          <img src="./static/images/Table1.png" style="width: 50em; margin-bottom: -1em">
+        </div>
         <h5 class="subtitle is-6">
-          ...
+          <b>• Scenrario description:</b> The objective of a targed attack is to manipulate the model into predicting a
+          targeted label
+          on a targeted sample, using malicious samples in a batch.
+          <br><b>• Evalutation metric: </b> Attack Success Rate (ASR; %). ⬇️ is better.
+          <br><b>• Results: </b> The ASRs of <u>all TTA methods using MedBN</u> are consistently less than 20% for
+          CIFAR10-C, 10% for CIFAR100-C, and 1% for ImageNet-C.
+        </h5>
+        <!-- Indiscriminate Attack-->
+        <h2 class="title is-4 has-text-centered">📉 Indiscriminate Attack Scenarios (Table 2 in paper)</h2>
+        <div class="hero-body-center">
+          <img src="./static/images/Table2.png" style="width: 50em; margin-bottom: -1em">
+        </div>
+        <h5 class="subtitle is-6">
+          <b>• Scenrario description:</b> The objective of an indiscriminate attack is to degrade the performance of
+          benign
+          samples.
+          <br><b>• Evalutation metric: </b> Error Rate (ER; %) on benign samples. ⬆️ is better.
+          <br><b>• Results: </b> <u>All TTA methods using MedBN</u> shows reduced ERs as
+          high as approximately 9% in CIFAR10-C, 11% in CIFAR100-C, and 12% in ImageNet-C.
         </h5>
       </div>
     </div>
+    </div>
+    </div>
   </section>
-
+  <!-- End main results -->
 
   <!-- Image carousel -->
   <!-- <section class="hero is-small">
@@ -229,25 +251,25 @@
           <div class="item"> -->
   <!-- Your image here -->
   <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              First image description.
-            </h2>
-          </div>
-          <div class="item"> -->
+              <h2 class="subtitle has-text-centered">
+                First image description.
+              </h2>
+            </div>
+            <div class="item"> -->
   <!-- Your image here -->
   <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Second image description.
-            </h2>
-          </div>
-          <div class="item"> -->
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
+            <div class="item"> -->
   <!-- Your image here -->
   <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Third image description.
-            </h2>
-          </div>
-          <div class="item"> -->
+              <h2 class="subtitle has-text-centered">
+                Third image description.
+              </h2>
+            </div>
+            <div class="item"> -->
   <!-- Your image here -->
   <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
@@ -299,6 +321,24 @@
   <!--End paper poster -->
 
 
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+  <!-- Your video here -->
+  <!-- <source src="static/videos/banner_video.mp4" -->
+  <!-- type="video/mp4"> -->
+  <!-- </video> -->
+  <!-- <h2 class="subtitle has-text-centered"> -->
+  <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
+  <!-- </h2> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </section> -->
+  <!-- End teaser video -->
+
+
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -325,8 +365,8 @@
                 target="_blank">Academic Project Page Template</a> which was adopted from the <a
                 href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
               You are free to borrow the of this website, we just ask that you link back to this page in the footer.
-              <br> This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+                target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
 

@@ -18,10 +18,16 @@ body {
 }
 
 
+.teaser .hero-body-center {
+  padding-top: 0;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
 .teaser .hero-body {
   padding-top: 0;
-  padding-bottom: 2em;
-  text-align: center;
+  padding-bottom: 1.5em;
+  text-align: left;
 }
 
 .teaser {
