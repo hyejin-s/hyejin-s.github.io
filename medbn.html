@@ -107,7 +107,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2403.19326" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -140,12 +140,12 @@
       <div class="hero-body">
         <div class="hero-body-center"><img src="./static/images/f1-mean-vs-median.png"
             style="width: 30em; margin-bottom: -0.5em"></div>
-        <h2 class="title is-6 has-text-centered"> A potential security flaw in the test-time adaptation process:
+        <h2 class="title is-6 has-text-centered"> A potential security flaw in test-time adaptation process [1]:
           vulnerablity of mean in batch normalization layers
         </h2>
         <h5 class="subtitle is-6">
           While Test-Time Adaptation (TTA) methods excel in adapting to test data variations, such adaptability exposes
-          a model to vulnerability against malicious examples, particulary when a small proportion of the test batch is
+          a model to vulnerability against malicious examples, particularly when a small proportion of the test batch is
           maliciously
           manipulated.
         </h5>
@@ -172,6 +172,9 @@
           uses the median instead of mean to estimate the batch statistics.
           Our method is algorithm-agnostic, thus allowing <u>seamless integration</u>
           with existing TTA frameworks.
+          <br>
+          <br>
+          [1] Wu, Tong, et al. "Uncovering adversarial risks of test-time adaptation." <i>International Conference on Machine Learning</i>. 2023.
         </h5>
       </div>
     </div>
@@ -228,7 +231,7 @@
         </div>
 
         <h5 class="subtitle is-6">
-          <b>• Scenrario description:</b> The objective of a targed attack is to manipulate the model into predicting a
+          <b>• Scenrario description:</b> The objective of a targeted attack is to manipulate the model into predicting a
           targeted label
           on a targeted sample, using malicious samples in a batch.
           <br><b>• Evalutation metric: </b> Attack Success Rate (ASR; %). ⬇️ is better.
@@ -245,7 +248,7 @@
           <b>• Scenrario description:</b> The objective of an indiscriminate attack is to degrade the performance of
           benign
           samples.
-          <br><b>• Evalutation metric: </b> Error Rate (ER; %) on benign samples. ⬆️ is better.
+          <br><b>• Evalutation metric: </b> Error Rate (ER; %) on benign samples. ⬇️ is better.
           <br><b>• Results: </b> <u>All TTA methods using MedBN</u> shows reduced ERs as
           high as approximately 9% in CIFAR10-C, 11% in CIFAR100-C, and 12% in ImageNet-C.
         </h5>
