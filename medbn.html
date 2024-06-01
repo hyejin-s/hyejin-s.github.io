@@ -83,16 +83,16 @@
                   </a>
                 </span>
 
-                <!-- Supplementary PDF link
+                <!-- Supplementary PDF link -->
                 <span class="link-block">
-                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  <a href="static/pdfs/cvpr24_medbn_poster_final.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Supplementary</span>
+                    <span>Poster</span>
                   </a>
-                </span> -->
+                </span>
 
                 <!-- Github link -->
                 <span class="link-block">
@@ -113,6 +113,17 @@
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
+
+                    <!-- Video Link. -->
+                    <span class="link-block">
+                      <a href="https://www.youtube.com/watch?v=MZZ2iW9jeuM"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-youtube"></i>
+                        </span>
+                        <span>Video</span>
+                      </a>
+                    </span>
                   </a>
                 </span>
               </div>
@@ -215,6 +226,7 @@
         <div class="hero-body-center">
           <img src="./static/images/Table1.png" style="width: 50em; margin-bottom: -1em">
         </div>
+
         <h5 class="subtitle is-6">
           <b>• Scenrario description:</b> The objective of a targed attack is to manipulate the model into predicting a
           targeted label
@@ -241,7 +253,92 @@
     </div>
     </div>
     </div>
-  </section>
+  </section>medbn-overview
+
+  <!-- For making Table -->
+  <table class="tg" style="margin-left:auto;margin-right:auto; text-align: center;">
+    <thead>
+      <tr>
+        <th class="tg-6rtx"><span style="font-weight:bold">Dataset</span></th>
+        <th class="tg-6rtx"><span style="font-weight:bold"><i>B / m</span></th>
+        <th class="tg-6rtx"><span style="font-weight:bold">Normalization</span></th>
+        <th class="tg-6rtx"><span style="font-weight:bold" colspan="7">Method</span></th>
+        <th class="tg-6rtx"><span style="font-weight:bold"><i>m</i>=0</span></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="5" class="tg-io7e" style="background-color: #f0f0f0;">ResNet50 backbone</td>
+      </tr>
+      <tr>
+        <td class="tg-6aag">LDAM (NeurIPS'2019)</td>
+        <td class="tg-io7e">49.8</td>
+        <td class="tg-io7e">60.4</td>
+        <td class="tg-io7e">46.9</td>
+        <td class="tg-io7e">30.7</td>
+      </tr>
+      <tr>
+        <td class="tg-hcx2">RIDE (3 exp.) (ICLR'2021)</td>
+        <td class="tg-io7e">54.9</td>
+        <td class="tg-io7e">66.2</td>
+        <td class="tg-io7e">51.7</td>
+        <td class="tg-io7e">34.9</td>
+      </tr>
+      <tr>
+        <td class="tg-hcx2">BCL (NeurIPS'2020)</td>
+        <td class="tg-io7e">57.1</td>
+        <td class="tg-io7e">67.9</td>
+        <td class="tg-io7e">54.2</td>
+        <td class="tg-io7e">36.6</td>
+      </tr>
+      <tr>
+        <td class="tg-6aag"><sup>1</sup>LDAM+DRW+SAM (NeurIPS'2022)</td>
+        <td class="tg-io7e">53.1</td>
+        <td class="tg-io7e">62.0</td>
+        <td class="tg-io7e">52.1</td>
+        <td class="tg-io7e">32.8</td>
+      </tr>
+      <tr>
+        <td class="tg-6aag"><sup>2</sup>PaCo+SAM (ICCV'2021, NeurIPS'2022)</td>
+        <td class="tg-io7e">57.5</td>
+        <td class="tg-io7e">62.1</td>
+        <td class="tg-io7e">58.8</td>
+        <td class="tg-io7e">39.3</td>
+      </tr>
+      <tr>
+        <td colspan="5" class="tg-io7e" style="background-color: #f0f0f0;">ViT backbone</td>
+      </tr>
+      <tr>
+        <td class="tg-6aag">ViT (ICML'2021)</td>
+        <td class="tg-io7e">37.5</td>
+        <td class="tg-io7e">56.9</td>
+        <td class="tg-io7e">30.4</td>
+        <td class="tg-io7e">10.3</td>
+      </tr>
+      <tr>
+        <td class="tg-6aag">DeiT-III (ECCV'2022)</td>
+        <td class="tg-io7e">48.4</td>
+        <td class="tg-io7e">70.4</td>
+        <td class="tg-io7e">40.9</td>
+        <td class="tg-io7e">12.8</td>
+      </tr>
+      <tr>
+        <td class="tg-6aag"><sup>1</sup><span style="font-weight:bold">DeiT-LT (ours)</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">55.6</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">65.2</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">54.0</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">37.1</span></td>
+      </tr>
+      <tr>
+        <td class="tg-6aag"><sup>2</sup><span style="font-weight:bold">DeiT-LT (ours)</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">59.1</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">66.6</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">58.3</span></td>
+        <td class="tg-io7e"><span style="font-weight:bold">40.0</span></td>
+      </tr>
+    </tbody>
+  </table>
   <!-- End main results -->
 
   <!-- Image carousel -->
